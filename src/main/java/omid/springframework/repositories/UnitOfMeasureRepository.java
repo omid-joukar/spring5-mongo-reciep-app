@@ -1,6 +1,7 @@
 package omid.springframework.repositories;
 
 import omid.springframework.domain.UnitOfMeasure;
+import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.Optional;

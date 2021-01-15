@@ -8,7 +8,7 @@ import omid.springframework.converters.UnitOfMeasureToUnitOfMeasureCommand;
 import omid.springframework.domain.Ingredient;
 import omid.springframework.domain.Recipe;
 import omid.springframework.repositories.RecipeRepository;
-import omid.springframework.repositories.UnitOfMeasureRepository;
+import omid.springframework.repositories.UnitOfMeasureReactiveRepository;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
@@ -29,7 +29,7 @@ public class IngredientServiceImplTest {
     RecipeRepository recipeRepository;
 
     @Mock
-    UnitOfMeasureRepository unitOfMeasureRepository;
+    UnitOfMeasureReactiveRepository unitOfMeasureRepository;
 
     IngredientService ingredientService;
 
