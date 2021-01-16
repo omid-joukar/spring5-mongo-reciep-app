@@ -5,17 +5,11 @@ import omid.springframework.converters.RecipeCommandToRecipe;
 import omid.springframework.converters.RecipeToRecipeCommand;
 import omid.springframework.domain.Recipe;
 import omid.springframework.exceptions.NotFoundException;
-import omid.springframework.repositories.RecipeRepository;
 import lombok.extern.slf4j.Slf4j;
 import omid.springframework.repositories.reactive.RecipeReactiveRepository;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-
-import java.util.HashSet;
-import java.util.Optional;
-import java.util.Set;
 
 /**
  * Created by jt on 6/13/17.
@@ -55,13 +49,11 @@ public class RecipeServiceImpl implements RecipeService {
     }
 
     @Override
-    @Transactional
     public Mono<RecipeCommand> findCommandById(String id) {
         return Mono.just(recipeToRecipeCommand.convert(findById(id).block()));
     }
 
     @Override
-    @Transactional
     public Mono<RecipeCommand> saveRecipeCommand(RecipeCommand command) {
         Recipe detachedRecipe = recipeCommandToRecipe.convert(command);
 

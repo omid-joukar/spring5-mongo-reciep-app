@@ -39,7 +39,7 @@ public class ImageServiceImplTest {
         Recipe recipe = new Recipe();
         recipe.setId(id);
         when(recipeReactiveRepository.findById(anyString())).thenReturn(Mono.just(recipe));
-
+        when(recipeReactiveRepository.save(any(Recipe.class))).thenReturn(Mono.just(recipe));
         ArgumentCaptor<Recipe> argumentCaptor = ArgumentCaptor.forClass(Recipe.class);
 
         //when
