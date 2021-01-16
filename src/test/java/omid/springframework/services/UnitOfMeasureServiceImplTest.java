@@ -3,7 +3,7 @@ package omid.springframework.services;
 import omid.springframework.commands.UnitOfMeasureCommand;
 import omid.springframework.converters.UnitOfMeasureToUnitOfMeasureCommand;
 import omid.springframework.domain.UnitOfMeasure;
-import omid.springframework.repositories.UnitOfMeasureReactiveRepository;
+import omid.springframework.repositories.reactive.UnitOfMeasureReactiveRepository;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
