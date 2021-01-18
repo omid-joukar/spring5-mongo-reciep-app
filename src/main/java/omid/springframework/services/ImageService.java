@@ -10,3 +10,4 @@ public interface ImageService {
 
     Mono<Void> saveImageFile(String recipeId, MultipartFile file);
 }
+

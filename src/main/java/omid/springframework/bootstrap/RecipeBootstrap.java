@@ -1,9 +1,9 @@
 package omid.springframework.bootstrap;
 
+import lombok.extern.slf4j.Slf4j;
 import omid.springframework.domain.*;
 import omid.springframework.repositories.CategoryRepository;
 import omid.springframework.repositories.RecipeRepository;
-import lombok.extern.slf4j.Slf4j;
 import omid.springframework.repositories.UnitOfMeasureRepository;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
@@ -15,9 +15,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-/**
- * Created by jt on 6/13/17.
- */
 @Slf4j
 @Component
 public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEvent> {
@@ -41,7 +38,7 @@ public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEven
         loadUom();
         recipeRepository.saveAll(getRecipes());
         log.debug("Loading Bootstrap Data");
-        log.error("#####");
+
     }
 
     private void loadCategories(){
