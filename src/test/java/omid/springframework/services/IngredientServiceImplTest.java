@@ -45,7 +45,7 @@ public class IngredientServiceImplTest {
     public void setUp() throws Exception {
         MockitoAnnotations.initMocks(this);
 
-        ingredientService = new IngredientServiceImpl(ingredientToIngredientCommand,ingredientCommandToIngredient,recipeReactiveRepository,unitOfMeasureReactiveRepository,recipeRepository);
+        ingredientService = new IngredientServiceImpl(ingredientToIngredientCommand,ingredientCommandToIngredient,recipeReactiveRepository,unitOfMeasureReactiveRepository);
     }
 
     @Test
