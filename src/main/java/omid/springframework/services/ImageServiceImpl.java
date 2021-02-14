@@ -46,7 +46,7 @@ public class ImageServiceImpl implements ImageService {
                     }
                 });
 
-        recipeReactiveRepository.save(recipeMono.block()).block();
+        recipeReactiveRepository.save(recipeMono.toProcessor().block()).block();
 
         return Mono.empty();
 
